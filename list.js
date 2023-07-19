@@ -34,6 +34,12 @@ function deleteList(e){
    let removeOne = e.target.parentElement;
    removeOne.remove();
 }
+//엔터 키 갑지 이벤트 추가
+addValue.addEventListener("keypress", function (e){
+    if(e.key === "Enter"){
+        addTodo(); //엔터 키가 눌리면 addTodo()함수를 호출하여 할 일 목록 추가
+    }
+})
 //전체 삭제시
 function allClearList(e){
     if(confirm("정말 삭제하시겠습니까?") == true){
